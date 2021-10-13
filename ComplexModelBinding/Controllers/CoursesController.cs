@@ -46,7 +46,9 @@ namespace ComplexModelBinding.Controllers
         // GET: Courses/Create
         public IActionResult Create()
         {
-            return View();
+            CourseCreateViewModel viewModel = new();
+            viewModel.AllAvailableInstructors = _context.Instructors.OrderBy(i => i.FullName).ToList();
+            return View(viewModel);
         }
 
         // POST: Courses/Create
