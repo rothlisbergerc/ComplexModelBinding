@@ -24,5 +24,7 @@ namespace ComplexModelBinding.Models
         public string Description { get; set; }
 
         public List<Instructor> AllAvailableInstructors { get; set; }
+
+        public Instructor ChosenInstructor { get; set; }
     }
 }
