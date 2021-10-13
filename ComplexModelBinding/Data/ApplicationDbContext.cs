@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+﻿using ComplexModelBinding.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -12,5 +13,8 @@ namespace ComplexModelBinding.Data
             : base(options)
         {
         }
+
+        // add instructor to the database
+        public DbSet<Instructor> Instructors { get; set; }
     }
 }
