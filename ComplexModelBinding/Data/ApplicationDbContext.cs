@@ -16,5 +16,7 @@ namespace ComplexModelBinding.Data
 
         // add instructor to the database
         public DbSet<Instructor> Instructors { get; set; }
+
+        public DbSet<Course> Courses { get; set; }
     }
 }
